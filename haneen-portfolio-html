@@ -1,0 +1,57 @@
+Create a personal portfolio HTML page that includes the following:
+A main heading with your name.
+A paragraph describing your availability for hire and showing your old and new hourly rates (old rate should be struck through, and the new rate highlighted).
+A link to your LinkedIn profile.
+A section showcasing at least three client logos using images.
+A skills section listing your knowledge in HTML, CSS, and JavaScript frameworks, including Vue.js, React.js, Angular (with versions 4.0), Svelt, and Python.
+The page should use proper HTML structure, headings, paragraphs, lists, links, images, and basic formatting elements like <b>, <strong>, <del>, and <mark>.
+-------------------------------------------------
+Solution:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My Info</h1>
+    <p>
+    My Name is <b>Haneen Al-Masri</b> 
+    <br> Im <strong>Available</strong> For Hire 
+    <br> My Hour Old Price is <del>10$</del> 
+    And The New Price is <del><mark>30$</mark></del>
+    <br>Visit My Website From This Link <a href="www.linkedin.com/in/haneen-al-masri-513276305
+
+">My LinkedIn Account</a>
+<hr>
+<h1> Here Is Some Of My Clients </h1>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/HP_logo_2012.svg/768px-HP_logo_2012.svg.png" width="100px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/HP_logo_2012.svg/768px-HP_logo_2012.svg.png" width="100px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/HP_logo_2012.svg/768px-HP_logo_2012.svg.png" width="100px">
+ <hr>
+ <h1>My Skills</h1>
+ <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript
+        <ul>
+            <li>Vue.js</li>
+            <li>React.js</li>
+            <li>Angular
+                <ol start="4">
+                    <li>v4.0</li>
+                    <li>v4.0</li>
+                    <li>v4.0</li>
+                </ol>
+            </li>
+            <li>Svelt</li>
+        </ul>
+        <li>Paython</li>
+    </li>
+ </ul>  
+
+</p>
+    
+</body>
+</html>
+
