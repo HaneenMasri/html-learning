@@ -1,0 +1,154 @@
+Task 3: HTML Form Creation
+
+Task Description:
+
+Create an HTML form with the following requirements:
+
+Fields:
+
+Username: required, 5–20 characters, autofocus on page load.
+
+Email: readonly, prefilled with o@o.com.
+
+Token: hidden, value = b92f1fc2fce391ad7af633723afd3055.
+
+Programming Skills Checkboxes:
+
+User can select multiple skills: Problem Solving, Logical Thinking, Advanced Search, Analysis, Planning.
+
+Each checkbox must have a label linked with for and id.
+
+At least one skill must be checked by default.
+
+All checkboxes must share the same name: skills.
+
+Job Role Radio Buttons:
+
+User can select only one option: Front-End Developer, Back-End Developer, Business Analyst, Project Manager, Scrum Master.
+
+Each radio button must have a label linked with for and id.
+
+At least one option must be checked by default.
+
+All radio buttons must share the same name: job.
+
+Programming Language Dropdown:
+
+A <select> element containing programming languages with versions.
+
+Example groups: PHP (v5.0, v7.0, v8.0), Python (v2.0, v3.0, v3.9), JavaScript (ES5, ES6, ESNext).
+
+User can select one language only.
+
+Name of the select: language.
+
+Brief Textarea:
+
+Name: brief.
+
+Should contain a prefilled text and a placeholder: "Write Here Why You Want To Learn Programming".
+
+Buttons:
+
+Reset button labeled "Empty" → clears user input.
+
+Submit button labeled "Send" → submits data using GET method.
+
+Additional Requirements:
+
+All labels must be properly linked to inputs so clicking the label activates the input.
+
+The submitted data should appear in the URL after submission
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3 Form Solution</title>
+</head>
+<body>
+  <form method="get">
+
+    <!-- Username -->
+    <label for="username">Username</label><br>
+    <input type="text" id="username" name="Username" autofocus minlength="5" maxlength="20" required>
+    <br><hr>
+
+    <!-- Email -->
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="Email" readonly value="o@o.com">
+    <br><hr>
+
+    <!-- Hidden Token -->
+    <input type="hidden" name="Token" value="b92f1fc2fce391ad7af633723afd3055">
+
+    <!-- Programming Skills Checkboxes -->
+    <label>Programming Skills</label><br>
+    <input type="checkbox" id="ps" name="skills" value="Problem Solving" checked>
+    <label for="ps">Problem Solving</label><br>
+
+    <input type="checkbox" id="lt" name="skills" value="Logical Thinking">
+    <label for="lt">Logical Thinking</label><br>
+
+    <input type="checkbox" id="as" name="skills" value="Advanced Search">
+    <label for="as">Advanced Search</label><br>
+
+    <input type="checkbox" id="an" name="skills" value="Analysis">
+    <label for="an">Analysis</label><br>
+
+    <input type="checkbox" id="pl" name="skills" value="Planning">
+    <label for="pl">Planning</label>
+    <hr>
+
+    <!-- Job Role Radio Buttons -->
+    <label>Job Role</label><br>
+
+    <input type="radio" id="fe" name="job" value="Front-End Developer">
+    <label for="fe">Front-End Developer</label><br>
+
+    <input type="radio" id="be" name="job" value="Back-End Developer" checked>
+    <label for="be">Back-End Developer</label><br>
+
+    <input type="radio" id="ba" name="job" value="Business Analyst">
+    <label for="ba">Business Analyst</label><br>
+
+    <input type="radio" id="pm" name="job" value="Project Manager">
+    <label for="pm">Project Manager</label><br>
+
+    <input type="radio" id="sm" name="job" value="Scrum Master">
+    <label for="sm">Scrum Master</label>
+    <hr>
+
+    <!-- Programming Languages Select -->
+    <label for="language">Programming Language</label><br>
+    <select name="language" id="language">
+      <optgroup label="PHP">
+        <option value="php5">v5.0</option>
+        <option value="php7">v7.0</option>
+        <option value="php8">v8.0</option>
+      </optgroup>
+      <optgroup label="Python">
+        <option value="python2">v2.0</option>
+        <option value="python3">v3.0</option>
+        <option value="python3.9">v3.9</option>
+      </optgroup>
+      <optgroup label="JavaScript">
+        <option value="jsES5">ES5</option>
+        <option value="jsES6">ES6</option>
+        <option value="jsESNext">ESNext</option>
+      </optgroup>
+    </select>
+    <hr>
+
+    <!-- Brief Textarea -->
+    <label for="brief">Brief</label><br>
+    <textarea name="brief" id="brief" cols="50" rows="10" placeholder="Write Here Why You Want To Learn Programming">Write Here Why You Want To Learn Programming</textarea>
+    <hr>
+
+    <!-- Buttons -->
+    <input type="reset" value="Empty">
+    <input type="submit" value="Send">
+
+  </form>
+</body>
+</html>
