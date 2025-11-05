@@ -1,0 +1,65 @@
+
+Create an HTML form with five input fields: Username, Password, Mobile, Email, Subject.
+
+Requirements:
+
+Each field should have a label above it.
+
+All input fields must have placeholders to guide the user.
+
+The Username and Email fields are required.
+
+The Mobile field must accept numbers in this format: +20100 (234) 123.
+
+Insert a hidden input field with any number as its value.
+
+Add a Reset button labeled "Empty Form" that clears all inputs.
+
+Add a Submit button labeled "Send Data" that submits the form to test.py using the POST method.
+
+After each label + input, insert an <hr> to separate fields visually.
+--------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="test.py" method="post">
+    <div>
+      <hr>
+       <label>UserName</label>
+    <input type="text" name="UserName" required placeholder="write text">
+  </div>
+    <hr>
+    <div> <label>Password</label>
+    <input type="password" name="password" placeholder="write Password" >
+  </div>
+    <br>
+    <div> 
+      <label>Mobile</label><br>
+    <input type="tel" name="Mobile" placeholder="+20100 (234) 123" 
+           pattern="\+20\d{3} \(\d{3}\) \d{3}"
+                      title="Format: +20100 (234) 123">
+
+  </div>
+    <hr>
+     <div> 
+      <label>Email</label>
+    <input type="email" name="Email" required placeholder="write email">
+  </div>
+   <hr>
+    <div> 
+      <label>Subject</label>
+    <input type="text" name="Subject" placeholder="write text" >
+  </div>
+    <hr>
+<input type="hidden" name="id" value="123">
+<input type="reset" value="Empty Form">
+<input type="submit" value="Send Data">
+
+  </form>
+</body>
+</html>
