@@ -1,0 +1,93 @@
+Task:
+Create an HTML form with the following features:
+
+Three main fields:
+
+Username: required, 5–20 characters, autofocus on page load.
+
+Email: readonly, prefilled with o@o.com.
+
+Token: hidden, value = b92f1fc2fce391ad7af633723afd3055.
+
+Programming Skills Checkboxes:
+User can select multiple skills: Problem Solving, Logical Thinking, Advanced Search, Analysis, Planning.
+Each label is linked to its checkbox (for attribute).
+At least one option is checked by default.
+Name of all checkboxes: skills.
+Job Role Radio Buttons:
+User can select one option only: Front-End Developer, Back-End Developer, Business Analyst, Project Manager, Scrum Master.
+Each label is linked to its radio button (for attribute).
+At least one option is checked by default.
+Name of all radio buttons: job.
+Buttons:
+Reset button labeled "Empty" → clears all user input.
+Submit button labeled "Send" → submits data to the same page using GET method.
+Data should appear in the URL after submission
+.............................................................
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3 Form Solution</title>
+</head>
+<body>
+  <form method="get">
+
+    <!-- Username -->
+    <label for="username">Username</label><br>
+    <input type="text" id="username" name="Username" autofocus minlength="5" maxlength="20" required>
+    <br><hr>
+
+    <!-- Email -->
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="Email" readonly value="o@o.com">
+    <br><hr>
+
+    <!-- Hidden Token -->
+    <input type="hidden" name="Token" value="b92f1fc2fce391ad7af633723afd3055">
+
+    <!-- Programming Skills Checkboxes -->
+    <label>Programming Skills</label><br>
+    <input type="checkbox" id="ps" name="skills" value="Problem Solving" checked>
+    <label for="ps">Problem Solving</label><br>
+
+    <input type="checkbox" id="lt" name="skills" value="Logical Thinking">
+    <label for="lt">Logical Thinking</label><br>
+
+    <input type="checkbox" id="as" name="skills" value="Advanced Search">
+    <label for="as">Advanced Search</label><br>
+
+    <input type="checkbox" id="an" name="skills" value="Analysis">
+    <label for="an">Analysis</label><br>
+
+    <input type="checkbox" id="pl" name="skills" value="Planning">
+    <label for="pl">Planning</label>
+    <hr>
+
+    <!-- Job Role Radio Buttons -->
+    <label>Job Role</label><br>
+
+    <input type="radio" id="fe" name="job" value="Front-End Developer">
+    <label for="fe">Front-End Developer</label><br>
+
+    <input type="radio" id="be" name="job" value="Back-End Developer" checked>
+    <label for="be">Back-End Developer</label><br>
+
+    <input type="radio" id="ba" name="job" value="Business Analyst">
+    <label for="ba">Business Analyst</label><br>
+
+    <input type="radio" id="pm" name="job" value="Project Manager">
+    <label for="pm">Project Manager</label><br>
+
+    <input type="radio" id="sm" name="job" value="Scrum Master">
+    <label for="sm">Scrum Master</label>
+    <hr>
+
+    <!-- Buttons -->
+    <input type="reset" value="Empty">
+    <input type="submit" value="Send">
+
+  </form>
+</body>
+</html>
