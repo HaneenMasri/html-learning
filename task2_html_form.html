@@ -1,0 +1,42 @@
+Task:
+Create an HTML form with three input fields: Username, Email, Token.
+Requirements:
+Each field must have a label above it.
+The Token field should be hidden with the value:
+b92f1fc2fce391ad7af633723afd3055.
+The Email field must be readonly with the value: o@o.com.
+The Username field should:
+Be focused automatically when the page loads.
+Accept 5 to 20 characters only.
+Be required.
+Add a Reset button labeled "Empty" that clears the user input.
+Add a Submit button labeled "Send" to submit the form.
+The form should submit to the same page.
+Submitted data should appear in the URL (use GET method).
+...................................................................
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Username Form</title>
+</head>
+<body>
+  <form method="get">
+    
+    <label>Username</label><br>
+    <input type="text" name="Username" autofocus minlength="5" maxlength="20" required>
+    <br><hr>
+    
+    <label>Email</label><br>
+    <input type="email" name="Email" readonly value="o@o.com">
+    <br><hr>
+    
+    <input type="hidden" name="Token" value="b92f1fc2fce391ad7af633723afd3055">
+    
+    <input type="reset" value="Empty">
+    <input type="submit" value="Send">
+
+  </form>
+</body>
+</html>
